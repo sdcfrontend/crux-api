@@ -8,6 +8,7 @@ const app = express();
 const authRoute = require('./routes/auth');
 const sitesRoute = require('./routes/sites');
 const pagesRoute = require('./routes/pages');
+const recordsRoute = require('./routes/records');
 
 const testingRoute = require('./routes/testing');
 
@@ -20,6 +21,7 @@ app.use(express.urlencoded({
 app.use('/user', authRoute);
 app.use('/sites', sitesRoute);
 app.use('/pages', pagesRoute);
+app.use('/records', recordsRoute);
 
 app.use('/testing', testingRoute);
 

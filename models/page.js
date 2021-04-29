@@ -11,7 +11,7 @@ const PageSchema = mongoose.Schema({
     required: true,
     minLength: 1
   },
-  dateAdded: {
+  dateCreated: {
     type: Date,
     default: Date.now()
   },

@@ -2,6 +2,19 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models');
 
+// Get all pages
+router.get("/", async (req, res) => {
+  try {
+    const pages = await db.Page.find();
+
+    res.json(pages);
+  }
+
+  catch(error) {
+    res.status(500).json(error.message)
+  }
+});
+
 // Update page
 router.patch('/:pageId', async (req, res) => {
   const updateQuery = {};
