@@ -5,12 +5,12 @@ const RecordSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  devices: {
-    type: Object,
-    default: {},
+  metrics: {
+    type: Array,
+    default: [],
     required: true
   },
-  dateCreated: {
+  dateAdded: {
     type: Date,
     default: Date.now()
   },
